@@ -31,6 +31,10 @@
 
 ![现场工程师工作台](docs/images/fsm-technician-workbench.png)
 
+## 派单适配评估
+
+新增 `POST /api/admin/dispatch-fit`：综合工程师技能匹配度、服务距离、当前负载、备件准备、预计到场时间和紧急程度，输出适配分数、`DISPATCH / REVIEW / BLOCK` 派单结论及原因，帮助调度人员减少无效派单与 SLA 违约。
+
 ## 架构选型
 
 | 部分 | 技术与职责 |
