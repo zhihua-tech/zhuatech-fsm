@@ -81,3 +81,7 @@ docker compose up --build
 | ![知华科技微信咨询二维码 1](docs/images/zhuatech-wechat-consulting.png) | ![知华科技微信咨询二维码 2](docs/images/zhuatech-wechat-consulting-2.png) |
 
 搜索收录建议：FSM 源码、现场服务系统、工单派工、移动服务、Java FSM、Vue FSM、企业级 FSM、知华科技、上海如静知华信息科技有限公司。
+
+## 一次修复准备度
+
+新增 `POST /api/fsm/insights/first-time-fix-readiness`，综合症状匹配、工程师技能、备件、远程诊断置信度、安全许可和路程输出 `DISPATCH / PREPARE / BLOCK`。派工前即可发现备件、技能和安全条件缺口，提升首次上门解决率。
