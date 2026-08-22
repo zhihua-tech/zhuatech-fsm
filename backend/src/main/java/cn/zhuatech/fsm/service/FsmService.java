@@ -1,4 +1,4 @@
-/* Copyright 2026 Shanghai Rujing Zhihua Information Technology Co., Ltd. */
+/* Copyright 2026 Shanghai Rujing Zhihua Information Technology Co., Ltd. · https://www.zhuatech.cn/ */
 package cn.zhuatech.fsm.service;
 import cn.zhuatech.fsm.common.BusinessException; import cn.zhuatech.fsm.dto.FsmDto.*; import cn.zhuatech.fsm.model.*; import cn.zhuatech.fsm.repository.*; import org.springframework.stereotype.Service; import org.springframework.transaction.annotation.Transactional; import java.util.*;
 @Service @Transactional(readOnly=true) public class FsmService {
