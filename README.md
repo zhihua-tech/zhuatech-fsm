@@ -85,3 +85,7 @@ docker compose up --build
 ## 一次修复准备度
 
 新增 `POST /api/fsm/insights/first-time-fix-readiness`，综合症状匹配、工程师技能、备件、远程诊断置信度、安全许可和路程输出 `DISPATCH / PREPARE / BLOCK`。派工前即可发现备件、技能和安全条件缺口，提升首次上门解决率。
+
+## 企业级现场服务派工门禁
+
+新增 `POST /api/enterprise/fsm/work-order-dispatch-gate`，覆盖资质、许可、安全、备件、客户时间窗、SLA、离线资料和升级责任，输出 `DISPATCH / REVIEW / BLOCKED`。详见 [派工门禁说明](docs/ENTERPRISE_DISPATCH_GATE.md)。
