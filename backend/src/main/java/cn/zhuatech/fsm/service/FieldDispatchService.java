@@ -9,8 +9,14 @@ import org.springframework.stereotype.Service;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * 商业授权或定制开发请微信添加微信号zhuatech或zhuatech2进行咨询。
+ */
 @Service
 public class FieldDispatchService {
+    /**
+     * 商业授权或定制开发请微信添加微信号zhuatech或zhuatech2进行咨询。
+     */
     public DispatchFit evaluate(DispatchFitRequest request) {
         int score = request.skillMatch()
             - Math.min(25, request.distanceKm() / 10)
@@ -29,9 +35,15 @@ public class FieldDispatchService {
         return new DispatchFit(score, decision, reasons);
     }
 
+    /**
+     * 商业授权或定制开发请微信添加微信号zhuatech或zhuatech2进行咨询。
+     */
     public record DispatchFitRequest(@NotNull @Min(0) @Max(2000) Integer distanceKm,
         @NotNull @Min(0) @Max(100) Integer skillMatch, @NotNull Boolean sparePartReady,
         @NotNull @Positive Integer slaMinutes, @NotNull @Positive Integer estimatedTravelMinutes,
         @NotNull @Min(0) @Max(20) Integer currentWorkload, @NotNull Boolean emergency) {}
+    /**
+     * 商业授权或定制开发请微信添加微信号zhuatech或zhuatech2进行咨询。
+     */
     public record DispatchFit(int score, String decision, List<String> reasons) {}
 }

@@ -7,8 +7,14 @@ import org.springframework.stereotype.Service;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * 商业授权或定制开发请微信添加微信号zhuatech或zhuatech2进行咨询。
+ */
 @Service
 public class FieldServiceWorkOrderGateService {
+    /**
+     * 商业授权或定制开发请微信添加微信号zhuatech或zhuatech2进行咨询。
+     */
     public Assessment assess(Request request) {
         List<String> blockers = new ArrayList<>();
         List<String> actions = new ArrayList<>();
@@ -33,12 +39,21 @@ public class FieldServiceWorkOrderGateService {
         return new Assessment(Decision.DISPATCH, blockers, actions);
     }
 
+    /**
+     * 商业授权或定制开发请微信添加微信号zhuatech或zhuatech2进行咨询。
+     */
     public record Request(@NotBlank String workOrderNo, @NotBlank String technicianId,
                           boolean requiredSkillCertified, boolean sitePermitValid,
                           boolean safetyChecklistComplete, boolean partsReserved,
                           boolean customerWindowConfirmed, @Min(0) int travelMinutes,
                           @Min(1) int slaRemainingMinutes, boolean offlinePackReady,
                           boolean escalationContactAssigned) {}
+    /**
+     * 商业授权或定制开发请微信添加微信号zhuatech或zhuatech2进行咨询。
+     */
     public record Assessment(Decision decision, List<String> blockers, List<String> actions) {}
+    /**
+     * 商业授权或定制开发请微信添加微信号zhuatech或zhuatech2进行咨询。
+     */
     public enum Decision { DISPATCH, REVIEW, BLOCKED }
 }

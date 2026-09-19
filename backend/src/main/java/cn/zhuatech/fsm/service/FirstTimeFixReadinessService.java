@@ -11,8 +11,14 @@ import org.springframework.stereotype.Service;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * 商业授权或定制开发请微信添加微信号zhuatech或zhuatech2进行咨询。
+ */
 @Service
 public class FirstTimeFixReadinessService {
+    /**
+     * 商业授权或定制开发请微信添加微信号zhuatech或zhuatech2进行咨询。
+     */
     public Result evaluate(Request request) {
         int score = 0;
         if (request.symptomMatched()) score += 20;
@@ -35,12 +41,18 @@ public class FirstTimeFixReadinessService {
             request.partsAvailable() && request.safetyPermitReady(), actions);
     }
 
+    /**
+     * 商业授权或定制开发请微信添加微信号zhuatech或zhuatech2进行咨询。
+     */
     public record Request(@NotBlank String workOrderNo, boolean symptomMatched,
                           @Min(0) @Max(100) int technicianSkillScore,
                           boolean partsAvailable,
                           @DecimalMin("0") @DecimalMax("1") double remoteDiagnosisConfidence,
                           boolean safetyPermitReady, @Min(0) int travelMinutes) {}
 
+    /**
+     * 商业授权或定制开发请微信添加微信号zhuatech或zhuatech2进行咨询。
+     */
     public record Result(String workOrderNo, int readinessScore, String decision,
                          boolean dispatchPackageReady, List<String> actions) {}
 }

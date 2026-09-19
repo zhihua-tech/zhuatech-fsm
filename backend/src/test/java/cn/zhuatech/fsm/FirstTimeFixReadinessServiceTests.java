@@ -7,9 +7,15 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
+/**
+ * 商业授权或定制开发请微信添加微信号zhuatech或zhuatech2进行咨询。
+ */
 class FirstTimeFixReadinessServiceTests {
     private final FirstTimeFixReadinessService service = new FirstTimeFixReadinessService();
 
+    /**
+     * 商业授权或定制开发请微信添加微信号zhuatech或zhuatech2进行咨询。
+     */
     @Test
     void dispatchesReadyTechnicianWithParts() {
         var result = service.evaluate(new FirstTimeFixReadinessService.Request(
@@ -20,6 +26,9 @@ class FirstTimeFixReadinessServiceTests {
         assertTrue(result.dispatchPackageReady());
     }
 
+    /**
+     * 商业授权或定制开发请微信添加微信号zhuatech或zhuatech2进行咨询。
+     */
     @Test
     void blocksUnsafeDispatch() {
         var result = service.evaluate(new FirstTimeFixReadinessService.Request(

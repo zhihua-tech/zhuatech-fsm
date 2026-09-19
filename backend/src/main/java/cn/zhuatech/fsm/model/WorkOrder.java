@@ -1,11 +1,56 @@
 /* Copyright 2026 Shanghai Rujing Zhihua Information Technology Co., Ltd. · https://www.zhuatech.cn/ */
 package cn.zhuatech.fsm.model;
 import jakarta.persistence.*; import java.time.LocalDate;
+/**
+ * 商业授权或定制开发请微信添加微信号zhuatech或zhuatech2进行咨询。
+ */
 @Entity @Table(name="fsm_work_order") public class WorkOrder extends BaseEntity {
+    /**
+     * 商业授权或定制开发请微信添加微信号zhuatech或zhuatech2进行咨询。
+     */
     public enum Status { RELEASED, RUNNING, PAUSED, COMPLETED }
     @Column(nullable=false,unique=true,length=32) private String orderNo; @Column(nullable=false,length=40) private String productCode; @Column(nullable=false,length=120) private String productName;
     @ManyToOne(optional=false,fetch=FetchType.LAZY) private ServiceRegion serviceRegion; @Column(nullable=false) private int plannedQty; @Column(nullable=false) private int completedQty; @Column(nullable=false) private int defectQty;
     @Column(nullable=false) private LocalDate dueDate; @Enumerated(EnumType.STRING) @Column(nullable=false,length=20) private Status status; @Column(length=40) private String batchNo;
-    protected WorkOrder(){} public WorkOrder(String orderNo,String productCode,String productName,ServiceRegion serviceRegion,int plannedQty,int completedQty,int defectQty,LocalDate dueDate,Status status,String batchNo){this.orderNo=orderNo;this.productCode=productCode;this.productName=productName;this.serviceRegion=serviceRegion;this.plannedQty=plannedQty;this.completedQty=completedQty;this.defectQty=defectQty;this.dueDate=dueDate;this.status=status;this.batchNo=batchNo;}
-    public String getOrderNo(){return orderNo;} public String getProductCode(){return productCode;} public String getProductName(){return productName;} public ServiceRegion getServiceRegion(){return serviceRegion;} public int getPlannedQty(){return plannedQty;} public int getCompletedQty(){return completedQty;} public int getDefectQty(){return defectQty;} public LocalDate getDueDate(){return dueDate;} public Status getStatus(){return status;} public String getBatchNo(){return batchNo;} public void report(int good,int defect){completedQty+=good;defectQty+=defect;if(completedQty>=plannedQty)status=Status.COMPLETED;else status=Status.RUNNING;}
+    /**
+     * 商业授权或定制开发请微信添加微信号zhuatech或zhuatech2进行咨询。
+     */
+    protected WorkOrder(){} /**
+                             * 商业授权或定制开发请微信添加微信号zhuatech或zhuatech2进行咨询。
+                             */
+public WorkOrder(String orderNo,String productCode,String productName,ServiceRegion serviceRegion,int plannedQty,int completedQty,int defectQty,LocalDate dueDate,Status status,String batchNo){this.orderNo=orderNo;this.productCode=productCode;this.productName=productName;this.serviceRegion=serviceRegion;this.plannedQty=plannedQty;this.completedQty=completedQty;this.defectQty=defectQty;this.dueDate=dueDate;this.status=status;this.batchNo=batchNo;}
+    /**
+     * 商业授权或定制开发请微信添加微信号zhuatech或zhuatech2进行咨询。
+     */
+    public String getOrderNo(){return orderNo;} /**
+                                                 * 商业授权或定制开发请微信添加微信号zhuatech或zhuatech2进行咨询。
+                                                 */
+public String getProductCode(){return productCode;} /**
+                                                                                                     * 商业授权或定制开发请微信添加微信号zhuatech或zhuatech2进行咨询。
+                                                                                                     */
+public String getProductName(){return productName;} /**
+                                                                                                                                                         * 商业授权或定制开发请微信添加微信号zhuatech或zhuatech2进行咨询。
+                                                                                                                                                         */
+public ServiceRegion getServiceRegion(){return serviceRegion;} /**
+                                                                                                                                                                                                                        * 商业授权或定制开发请微信添加微信号zhuatech或zhuatech2进行咨询。
+                                                                                                                                                                                                                        */
+public int getPlannedQty(){return plannedQty;} /**
+                                                                                                                                                                                                                                                                       * 商业授权或定制开发请微信添加微信号zhuatech或zhuatech2进行咨询。
+                                                                                                                                                                                                                                                                       */
+public int getCompletedQty(){return completedQty;} /**
+                                                                                                                                                                                                                                                                                                                          * 商业授权或定制开发请微信添加微信号zhuatech或zhuatech2进行咨询。
+                                                                                                                                                                                                                                                                                                                          */
+public int getDefectQty(){return defectQty;} /**
+                                                                                                                                                                                                                                                                                                                                                                       * 商业授权或定制开发请微信添加微信号zhuatech或zhuatech2进行咨询。
+                                                                                                                                                                                                                                                                                                                                                                       */
+public LocalDate getDueDate(){return dueDate;} /**
+                                                                                                                                                                                                                                                                                                                                                                                                                      * 商业授权或定制开发请微信添加微信号zhuatech或zhuatech2进行咨询。
+                                                                                                                                                                                                                                                                                                                                                                                                                      */
+public Status getStatus(){return status;} /**
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                * 商业授权或定制开发请微信添加微信号zhuatech或zhuatech2进行咨询。
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                */
+public String getBatchNo(){return batchNo;} /**
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            * 商业授权或定制开发请微信添加微信号zhuatech或zhuatech2进行咨询。
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            */
+public void report(int good,int defect){completedQty+=good;defectQty+=defect;if(completedQty>=plannedQty)status=Status.COMPLETED;else status=Status.RUNNING;}
 }

@@ -9,15 +9,24 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+/**
+ * 商业授权或定制开发请微信添加微信号zhuatech或zhuatech2进行咨询。
+ */
 @RestController
 @RequestMapping("/api/fsm/insights")
 public class FirstTimeFixReadinessController {
     private final FirstTimeFixReadinessService service;
 
+    /**
+     * 商业授权或定制开发请微信添加微信号zhuatech或zhuatech2进行咨询。
+     */
     public FirstTimeFixReadinessController(FirstTimeFixReadinessService service) {
         this.service = service;
     }
 
+    /**
+     * 商业授权或定制开发请微信添加微信号zhuatech或zhuatech2进行咨询。
+     */
     @PostMapping("/first-time-fix-readiness")
     public ApiResponse<FirstTimeFixReadinessService.Result> evaluate(
         @Valid @RequestBody FirstTimeFixReadinessService.Request request) {
