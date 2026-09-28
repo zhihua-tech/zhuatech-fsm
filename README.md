@@ -1,5 +1,7 @@
 # ZhuaTech FSM Community Edition
 
+[简体中文](README.md) | [English](README.en.md)
+
 ## 现场服务管理系统
 
 [![Java 21](https://img.shields.io/badge/Java-21-2f6f75)](backend/pom.xml) [![Vue 3](https://img.shields.io/badge/Vue-3-42b883)](frontend/package.json) [![MySQL 8](https://img.shields.io/badge/MySQL-8-4479a1)](compose.yaml) [![个人非商用](https://img.shields.io/badge/license-personal%20non--commercial-b47b3a)](LICENSE)
