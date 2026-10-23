@@ -1,5 +1,11 @@
 [简体中文](README.md) | **English**
 
+## 2026-10-23 update: Field-visit travel and parts feasibility
+
+Calculates earliest field-service arrival and completion from technician readiness, travel, parts availability and appointment windows, exposing lateness and infeasible visits without dispatching.
+
+After signing in to the real backend, open the bottom-right business calculation tool to submit structured input, inspect calculated results and export complete JSON. The endpoint is `POST /api/workbench/field-visit-feasibility` with the existing JWT. Computation is implemented server-side; it does not query another user's records, persist business documents, approve transactions or invoke external models. See [algorithm, sample and test notes](docs/AI_WORKFLOW_UPGRADE_20261023.md).
+
 # ZhuaTech Field Service Management
 
 > A source-available enterprise project by [ZhuaTech](https://www.zhuatech.cn/) for enterprise business operations and digital management.
