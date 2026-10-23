@@ -1,0 +1,97 @@
+{
+  "slug": "fsm",
+  "title": "现场服务工时与备件双限容量",
+  "fields": [
+    {
+      "key": "id",
+      "label": "记录编号",
+      "type": "ID"
+    },
+    {
+      "key": "technicians",
+      "label": "可用技师数",
+      "type": "NUMBER",
+      "scale": 0,
+      "min": "0",
+      "max": "1000000"
+    },
+    {
+      "key": "minutesPerTech",
+      "label": "每人有效分钟",
+      "type": "NUMBER",
+      "scale": 6,
+      "min": "0",
+      "max": "1000000000000"
+    },
+    {
+      "key": "repairMinutes",
+      "label": "每单维修分钟",
+      "type": "NUMBER",
+      "scale": 6,
+      "min": "0.000001",
+      "max": "1000000000000"
+    },
+    {
+      "key": "travelMinutes",
+      "label": "每单往返分钟",
+      "type": "NUMBER",
+      "scale": 6,
+      "min": "0",
+      "max": "1000000000000"
+    },
+    {
+      "key": "readyPartKits",
+      "label": "齐套备件工单数",
+      "type": "NUMBER",
+      "scale": 0,
+      "min": "0",
+      "max": "1000000"
+    },
+    {
+      "key": "plannedJobs",
+      "label": "计划服务工单",
+      "type": "NUMBER",
+      "scale": 0,
+      "min": "0",
+      "max": "1000000"
+    }
+  ],
+  "columns": [
+    {
+      "key": "timeCapacity",
+      "label": "工时容量单数"
+    },
+    {
+      "key": "spareCapacity",
+      "label": "齐套备件单数"
+    },
+    {
+      "key": "serviceableJobs",
+      "label": "双限可服务单数"
+    },
+    {
+      "key": "uncoveredJobs",
+      "label": "工单缺口"
+    }
+  ],
+  "description": "核对每单维修及往返时长、可用技师工时和实际齐套备件，按完整工单计算本班服务能力；不自动派单。",
+  "owner": "上海如静知华信息科技有限公司",
+  "website": "https://www.zhuatech.cn/",
+  "authorization": "商业授权或定制开发请微信添加微信号zhuatech或zhuatech2进行咨询。",
+  "version": 1,
+  "notes": "输入均须为已获授权的同口径数据。金额固定人民币元；比例为百分数。核算结果只用于复核，未审批、未写库、未发起外部调用，也未触发付款、签名、资料销毁或设备控制。建议不构成法律、安全、会计或碳核证结论。",
+  "sample": {
+    "asOf": "2026-10-24",
+    "records": [
+      {
+        "id": "ITEM-001",
+        "technicians": "4",
+        "minutesPerTech": "420",
+        "repairMinutes": "90",
+        "travelMinutes": "30",
+        "readyPartKits": "12",
+        "plannedJobs": "15"
+      }
+    ]
+  }
+}

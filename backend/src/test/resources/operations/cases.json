@@ -1,0 +1,67 @@
+[
+  {
+    "patch": {},
+    "expected": {
+      "decision": "HOLD",
+      "timeCapacity": "#14",
+      "serviceableJobs": "#12",
+      "uncoveredJobs": "#3"
+    },
+    "error": false
+  },
+  {
+    "patch": {
+      "plannedJobs": "12"
+    },
+    "expected": {
+      "decision": "PASS"
+    },
+    "error": false
+  },
+  {
+    "patch": {
+      "readyPartKits": "20"
+    },
+    "expected": {
+      "serviceableJobs": "#14"
+    },
+    "error": false
+  },
+  {
+    "patch": {
+      "technicians": "0"
+    },
+    "expected": {
+      "serviceableJobs": "#0"
+    },
+    "error": false
+  },
+  {
+    "patch": {
+      "repairMinutes": "0"
+    },
+    "expected": {},
+    "error": true
+  },
+  {
+    "patch": {
+      "travelMinutes": "0",
+      "readyPartKits": "20"
+    },
+    "expected": {
+      "timeCapacity": "#18",
+      "decision": "PASS"
+    },
+    "error": false
+  },
+  {
+    "patch": {
+      "plannedJobs": "0",
+      "technicians": "0"
+    },
+    "expected": {
+      "decision": "PASS"
+    },
+    "error": false
+  }
+]
